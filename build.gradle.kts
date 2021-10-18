@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.5.30"
+    jacoco
 }
 
 group = "me.ventr"
@@ -12,7 +13,9 @@ repositories {
 }
 
 dependencies {
+    implementation("junit:junit:4.13.1")
     testImplementation(kotlin("test"))
+    testImplementation("junit:junit:4.13.2")
 }
 
 tasks.test {
