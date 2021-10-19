@@ -13,12 +13,7 @@ class WallServiceTest {
         Likes(),Reposts(),Views(),"post",0,emptyArray<Post>(),
         false,false,false,0,false,false,Donut(),0)
         val rezult=add(testPost)
-        if(rezult.id!=0){
-            assertEquals(true,true)
-        }
-        else{
-            assertEquals(true,false)
-        }
+        assertTrue(rezult.id!=0)
     }
 
     @Test
@@ -29,8 +24,7 @@ class WallServiceTest {
             false,false,false,0,false,false,Donut(),0)
 
         val rezult=update(testPost)
-        assertEquals(true,rezult)
-
+        assertFalse(rezult)
 
     }
 
@@ -43,6 +37,6 @@ class WallServiceTest {
             false,false,false,0,false,false,Donut(),0)
 
         val rezult=update(testPost2)
-        assertEquals(false,rezult)
+        assertFalse(rezult)
     }
 }
