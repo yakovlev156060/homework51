@@ -83,10 +83,10 @@ public data class Views(
 }
 
 public data class Donut(
-    val is_donut: Boolean = true,
+    val isDonut: Boolean = true,
     val paidDuration: Int = 0,
     val placeholder: Placeholder = Placeholder(),
-    val canPublish_free_copy: Boolean = true,
+    val canPublishFreeCopy: Boolean = true,
     val editMode: String = ""){
 }
 
